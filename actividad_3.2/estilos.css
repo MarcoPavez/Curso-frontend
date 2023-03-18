@@ -1,0 +1,91 @@
+* {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* INTRODUCCION */
+.introduccion{
+  display: flex;
+  flex-direction: column;
+}
+
+.introduccion h1 {
+  color: rgb(0, 0, 102);
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+}
+
+.imagen{
+  max-width: 100%;
+}
+
+.imagen img {
+  border-style: double;
+  border-radius: 0.4rem;
+  border-width: 1px;
+  border-color: grey;
+  padding: 0.4rem;
+  width: 100%;
+}
+
+/* PRIMERA SECCION: CONSEJOS */
+
+.consejosCoccion{
+    font-size: 1.5rem;
+    color: rgb(90, 90, 90);
+}
+
+p span{
+    color: rgb(0, 0, 102);
+    font-weight: bold;
+  }
+
+li{
+    color: rgb(0, 0, 102);
+}
+
+li span{
+    color: rgb(90, 90, 90);
+}
+
+/* TABLA */
+
+.tablaTiempoCoccion h1{
+    font-size: 3rem;
+    font-weight: 100;
+    color: rgb(0, 0, 102);
+}
+
+table{
+    table-layout: auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    height: 5rem;
+}
+
+thead tr th{
+    background-color: rgb(0, 0, 102);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+tr td{
+    text-align: center;
+    border: 1px solid;
+    border-color: rgb(199, 199, 199);
+}
+
+
+tr td:first-child{
+    font-size: 1.25rem;
+    background-color: rgb(210, 210, 247);
+    color: rgb(0, 0, 102);
+    height: 3rem;
+    text-align: left;
+}
+
+
+
