@@ -10,10 +10,11 @@
 
 <body>
 
-    <form>
+    <!-- para revisar formulario, se usa method get, para postearlo se usa post -->
+    <form action="index.html" method="get">
 
-        <label>Nombre completo</label>
-        <input required type="text"><br><br>
+        <label for="nombre">Nombre completo</label>
+        <input required type="text" id="nombre"><br><br>
 
         <label>Correo electrónico</label>
         <input required type="text"><br><br>
@@ -140,8 +141,11 @@
             
         </fieldset><br>
 
-        <label>Género</label>
-        <input type="radio" name="genero">Masculino
+        <p>Género</p>
+
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="masculino" name="genero">
+
         <input type="radio" name="genero">Femenino
         <input type="radio" name="genero">Otro<br><br>
 
