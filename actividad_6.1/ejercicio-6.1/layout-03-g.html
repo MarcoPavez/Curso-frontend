@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />    
     <title>Layout 1 - CSS Grid</title>
     <style>
-        header, nav, article, aside, footer {background-color: green;}
+        header, nav, article, aside, footer {background-color: yellow;}
         body {            
             margin: 0; padding: 0;
             display: grid;
@@ -12,10 +12,8 @@
             gap: 10px;
             grid-template-areas: 
             "h h h h h h"
-            "s a a a a a"
-            "n a a a a a"
-            "n a a a a a"
-            "n f f f f f"
+            "a a a a n s"
+            "f f f f f f"
             ;
         }
         header {grid-area: h;}
@@ -31,5 +29,6 @@
     <article>Article</article>
     <aside>Aside</aside>
     <footer>Footer</footer>
+    <a href="../indice.html" style="font-size: 2rem;">Retornar a índice</a>
 </body>
 </html>
