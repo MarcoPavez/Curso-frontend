@@ -1,0 +1,69 @@
+body {
+  display: grid;
+  gap: 1px;
+  grid-template-areas: 
+  "r w v g"
+  "c a l l"
+  "c p y t"
+  "o m y b";
+  width: 40%;
+}
+
+.rojo {
+  background-color: red;
+  grid-area: r;
+}
+.blanco {
+  background-color: white;
+  grid-area: w;
+}
+.verde {
+  background-color: green;
+  grid-area: v;
+}
+.gris {
+  background-color: gray;
+  grid-area: g;
+}
+.cafe {
+  background-color: brown;
+  grid-area: c;
+}
+.azul {
+  background-color: blue;
+  grid-area: a;
+}
+.rosado {
+  background-color: pink;
+  grid-area: p;
+}
+.violeta {
+  background-color: violet;
+  grid-area: l;
+}
+.naranjo {
+  background-color: orange;
+  grid-area: o;
+}
+.purpura {
+  background-color: purple;
+  grid-area: m;
+}
+.amarillo {
+  background-color: yellow;
+  grid-area: y;
+}
+.turquesa {
+  background-color: turquoise;
+  grid-area: t;
+}
+.negro {
+  background-color: black;
+  grid-area: b;
+  color: white;
+}
+
+.amarillo span, .cafe span{
+    display: flex;
+    margin-top: 9px;
+}

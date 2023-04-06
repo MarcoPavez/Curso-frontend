@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación M2S8</title>
+</head>
+
+<body>
+
+    <script>
+
+        function Cliente(nombre, identificador, clave, saldo) {
+            this.nombre = nombre,
+                this.identificador = identificador,
+                this.clave = clave,
+                this.saldo = saldo
+        }
+
+        let cliente1 = new Cliente("Juan Rodriguez", 1, 123, 60000);
+        let cliente2 = new Cliente("Pedro Pérez", 2, 456, 100000);
+        let cliente3 = new Cliente("Francisco Fernández", 3, 789, 4000000)
+
+        let clientes = [cliente1, cliente2, cliente3]
+
+        alert("Bienvenido a Banca en Línea")
+
+        let clienteActual;
+
+        while (!clienteActual) {
+
+            let identificadorCliente = parseInt(prompt("Ingresa tu identificador"));
+            let claveCliente = parseInt(prompt("Ingresa tu clave"));
+
+            for (let i = 0; i < clientes.length; i++) {
+                if (identificadorCliente === clientes[i].identificador && claveCliente === clientes[i].clave) {
+                    clienteActual = clientes[i];
+                    break;
+                }
+                else {
+                    alert("Identificador y/o clave incorrectos. Intente nuevamente");
+                    break;
+                }
+            }
+        }
+
+        let opcionInicio;
+
+        while (opcionInicio != 4) {
+            opcionInicio = parseInt(prompt(`Bienvenido/a ${clienteActual.nombre}\n¿Qué desea hacer?\n1.-Realizar un depósito\n2.-Realizar un giro\n3.- Ver tu saldo\n4.- Salir`))
+
+            switch (opcionInicio) {
+                case 1:
+                    let deposito = parseInt(prompt(`Su saldo actual es: ${clienteActual.saldo}\nIngrese el monto que desea depositar`))
+                    clienteActual.saldo = deposito + clienteActual.saldo
+                    alert("Su nuevo saldo es " + clienteActual.saldo)
+                    break;
+                case 2:
+                    let giro = parseInt(prompt(`Su saldo actual es: ${clienteActual.saldo}\nIngrese el monto que desea girar`))
+                    clienteActual.saldo = clienteActual.saldo - giro
+                    alert("Su nuevo saldo es " + clienteActual.saldo)
+                    break;
+                case 3:
+                    alert(`Su saldo es: ${clienteActual.saldo}`)
+                    break;
+                case 4:
+                    alert("Gracias por preferir nuestro banco. Adiós.")
+                    break;
+                default:
+                    alert("Ingresa un dígito del 1 al 4.")
+                    break;
+            }
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+.rosado {
+  background-color: pink;
+  color: pink;
+}
+
+.verde {
+  background-color: green;
+  color: green;
+}
+
+.azul {
+  background-color: blue;
+  color: blue; 
+}
+
+.rojo {
+  background-color: red;
+  color: red;
+}
+
+.morado {
+  background-color: purple;
+  color: purple;
+}
+
+.gris {
+  background-color: gray;
+  color: gray;
+}
+
+@media (max-width: 500px) {
+    
+  /* .rosado,
+  .verde,
+  .azul,
+  .gris {
+    flex-wrap: wrap;
+  } */
+
+  .rosado, .verde{
+    height: 25%;
+  }
+
+  .azul{
+    height: 15%;
+  }
+
+  .gris{
+    height: 35%;
+  }
+
+  .rojo {
+    display: none;
+  }
+
+  .morado {
+    display: none;
+  }
+}
+
+@media (min-width:501px) and (max-width:750px){
+
+    .rosado{
+        height: 25%;
+    }
+
+    .verde,.azul,.rojo{
+        display: inline-block;
+        width: 32.7%;
+        height: 25%;
+    
+    }
+
+    .morado,.gris{
+        display: inline-block;
+        height: 50%;
+    }
+
+    .morado{
+        width: 60%;
+    }
+
+    .gris{
+        width: 39.1%;
+    }
+
+}
+ 
+@media (min-width:751px){
+    .rosdo{
+        height: 5%;
+    }
+
+    .verde{
+        height:25%
+    }
+
+    .azul{
+        height:45%
+    }
+
+    .rojo, .morado, .gris{
+        display: inline-block;
+        height: 25%;
+        width: 33%;
+    }
+}

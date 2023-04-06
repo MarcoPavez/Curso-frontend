@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Formulario de registro</title>
+</head>
+
+<body>
+
+    <!-- para revisar formulario, se usa method get, para postearlo se usa post -->
+    <form action="index.html" method="get">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" required>
+
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido" required>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" name="correo" required>
+
+        <label for="contrasena">Contraseña</label>
+        <input type="password" name="contrasena" required>
+        <span>Debe contener, al menos, 8 caracteres, una letra mayúscula, una letra minúscula, un número y un caracter
+            especial.</span>
+
+        <label for="confirmarContrasena">Confirmar contraseña</label>
+        <input type="password" name="confirmarContrasena" required>
+
+        <label for="seleccionarPais">País de residencia</label>
+        <select name="pais" id="seleccionarPais" required>
+            <option value="">--Selecciona una opción--</option>
+            <option value="chile">Chile</option>
+            <option value="argentina">Argentina</option>
+            <option value="peru">Perú</option>
+            <option value="venezuela">Venezuela</option>
+            <option value="brasil">Brasil</option>
+            <option value="colombia">Colombia</option>
+            <option value="uruguay">Uruguay</option>
+            <option value="ecuador">Ecuador</option>
+        </select>
+
+        <label for="fechaNacimiento">Selecciona tu fecha de nacimiento</label>
+        <input type="date" id="fechaNacimiento" required>
+
+        <fieldset>
+            <legend>Género</legend>
+
+            <div>
+                <input type="radio" id="masculino" name="genero" value="masculino"></input>
+                <label for="masculino">Masculino</label>
+            </div>
+            <div>
+                <input type="radio" id="femenino" name="genero" value="femenino">
+                <label for="femenino">Femenino</label>
+            </div>
+            <div>
+                <input type="radio" id="otro" name="genero" value="otro">
+                <label for="otro">Otro</label>
+            </div>
+
+        </fieldset>
+
+        <label>
+            <input type="checkbox" id="terminosCondiciones" value="acepta" required>Acepto los Términos y Condiciones
+        </label>
+
+        <input type="submit"></input>
+    </form>
+
+    <script>
+
+        const form = document.querySelector('form');
+        const nameInput = document.querySelector('#nombre');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent form submission
+
+            const nameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/; // Regular expression for name format
+            const nameValue = nameInput.value.trim(); // Trim whitespace from input value
+
+            if (!nameRegex.test(nameValue)) {
+                alert('Please enter a valid name.'); // Show error message
+                nameInput.focus(); // Set focus to name input
+            } else {
+                // Input is valid, submit the form
+                form.submit();
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

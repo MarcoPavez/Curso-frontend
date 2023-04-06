@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario hora médica</title>
+</head>
+<body>
+    
+    <form action="./redireccion.html" method="get">
+        <h1>FORMULARIO</h1>
+        <label for="nombre">NOMBRE</label><br>
+        <input type="text" name="nombre" required><br><br>
+        <label for="direccion">DIRECCIÓN</label><br>
+        <input type="text" name="direccion" required><br><br>
+        <label for="especialidad">ESPECIALIDAD MÉDICA</label><br>
+        <select name="especialidad" required>
+            <option value="void">-</option>
+            <option value="Medicina interna">MEDICINA INTERNA</option>
+            <option value="Medicina general">MEDICINA GENERAL</option>
+            <option value="Traumatología">TRAUMATOLOGÍA</option>
+            <option value="Nutricionista">NUTRICIONISTA</option>
+        </select><br><br>
+        <label for="hora">HORA</label><br>
+        <input type="time" name="hora" required><br><br>
+        
+        <label for="fecha">FECHA</label><br>
+        <input type="date" name="fecha" required><br><br>
+
+        <input type="submit" value="Solicitar hora">
+
+    </form>
+
+</body>
+</html>

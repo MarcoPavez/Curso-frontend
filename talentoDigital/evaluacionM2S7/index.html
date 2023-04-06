@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación M2S7</title>
+</head>
+
+<body>
+
+    <script>
+
+        function comparadorNumeros(numeroA, numeroB) {
+            if (numeroA > numeroB) {
+                alert(numeroA + " es mayor que " + numeroB)
+            } else if (numeroA < numeroB) {
+                alert(numeroB + " es mayor que " + numeroA)
+            } else {
+                alert("Los números son iguales")
+            }
+        }
+
+        function sumaNumeros(numeroA, numeroB) {
+            resultado = numeroA + numeroB
+            alert("El resultado de sumar " + numeroA + " más " + numeroB + " es igual a " + resultado)
+        }
+
+        function restaNumeros(numeroA, numeroB) {
+            resultado = numeroA - numeroB
+            alert("El resultado de restar " + numeroA + " menos " + numeroB + " es igual a " + resultado)
+        }
+
+        function multiplicarNumeros(numeroA, numeroB) {
+            resultado = numeroA * numeroB
+            alert("El resultado de multiplicar " + numeroA + " con " + numeroB + " es igual a " + resultado)
+        }
+
+        function dividirNumeros(numeroA, numeroB) {
+            resultado = numeroA / numeroB
+            alert("El resultado de dividir " + numeroA + " entre " + numeroB + " es igual a " + resultado)
+        }
+
+
+
+
+        let option;
+
+        while (option !== "7") {
+            option = prompt("Seleccione que desea hacer:\n 1.-Calcular cual número es mayor\n2.-Sumar\n3.-Restar\n4.-Multiplicar\n5.-Dividir\n6.-Mostrar los números ingresados\n7.-Salir");
+            switch (option) {
+                case "1":
+                    primerNumero = prompt("Ingresa el primer número")
+                    segundoNumero = prompt("Ingresa el segundo número")
+                    comparadorNumeros(primerNumero, segundoNumero)
+                    break;
+                case "2":
+                    primerNumero = parseInt(prompt("Ingresa el primer número"))
+                    segundoNumero = parseInt(prompt("Ingresa el segundo número"))
+                    sumaNumeros(primerNumero, segundoNumero)
+                    break;
+                case "3":
+                    primerNumero = parseInt(prompt("Ingresa el primer número"))
+                    segundoNumero = parseInt(prompt("Ingresa el segundo número"))
+                    restaNumeros(primerNumero, segundoNumero)
+                    break;
+                case "4":
+                    primerNumero = parseInt(prompt("Ingresa el primer número"))
+                    segundoNumero = parseInt(prompt("Ingresa el segundo número"))
+                    multiplicarNumeros(primerNumero, segundoNumero)
+                    break;
+                case "5":
+
+                    primerNumero = parseInt(prompt("Ingresa el primer número"))
+                    segundoNumero = parseInt(prompt("Ingresa el segundo número"))
+
+                    while (segundoNumero === 0) {
+                        alert("No puedes dividir un número por 0. Inténtalo nuevamente.")
+                        segundoNumero = parseInt(prompt("Ingresa el segundo número"))
+                    }
+                    
+                    dividirNumeros(primerNumero, segundoNumero)
+
+                    break;
+                case "6":
+                    primerNumero = prompt("Ingresa el primer número")
+                    segundoNumero = prompt("Ingresa el segundo número")
+                    alert("Los números ingresados son " + primerNumero + " y " + segundoNumero)
+                    break;
+                case "7":
+                    alert("Gracias por participar")
+                    break;
+                default:
+                    alert("Elección incorrecta. Intenta nuevamente con números del 1 al 7")
+                    break;
+            }
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
